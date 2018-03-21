@@ -1,0 +1,32 @@
+<ion-view ng-controller="LoginController" title="Login">
+    <ion-content class="login text-center">
+        <ion-row class="logo-row">
+            <ion-col>
+            </ion-col>
+            <ion-col>
+                <img class="logoInterfell" src="./img/interfell.png"/>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+        </ion-row>
+        <form ng-submit="login()">
+            <div class="list">
+                <label class="item item-input inputLogin">
+                    <input ng-model="user.username" placeholder="Usuario" type="text">
+                    </input>
+                </label>
+                <label class="item item-input inputLogin">
+                    <input ng-model="user.password" placeholder="Contraseña" type="password">
+                    </input>
+                </label>
+                <label class="item item-input inputLogin">
+                    <input ng-model="user.app" placeholder="APP" type="text">
+                    </input>
+                </label>
+                <button class="button button-block button-calm" ng-disabled="user.username == '' || user.password == '' || user.app == ''" type="submit">
+                    Iniciar Sesión
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
